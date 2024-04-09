@@ -1,0 +1,124 @@
+header {
+
+    nav {
+
+        height: 60px;
+        background: white;
+
+        @media screen and (max-width:770px) {
+            display: none;
+            
+
+        }
+        
+
+        ul {
+
+        
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        text-transform: uppercase;
+        font-size: 0.7rem;
+        font-family: $font1;
+        font-weight: 800;
+        height: 100%;
+        
+        li {
+            position: relative;
+            cursor: pointer;
+            
+            &:first-child {
+                color: purple;
+
+                &::before {
+                    content: " ";
+                    height: 3px;
+                    width: 100%;
+                    background: purple;
+                    position: absolute;
+                    top: -10px;
+                }
+            }
+            
+
+            &:hover {
+                color: purple;
+                transition: 0.4s;
+                scale: 1.1;   
+            }
+
+            &:hover::before {
+
+                content: " ";
+                    height: 2px;
+                    width: 100%;
+                    background: purple;
+                    position: absolute;
+                    top: -10px;
+            }
+        }
+
+        button {
+
+            background: rgb(204, 204, 204);
+            color: black;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+
+    }
+    }
+
+    .header-container {
+
+        background: url(/assets/img/bg.jpg) center/cover;
+        padding: 50px;
+
+        img {
+            width: 50%;
+        }
+
+        h1 {
+            color: white;
+            text-transform: uppercase;
+            margin: 30px 0;
+            font-size: 1.5rem;
+            font-weight: 800;
+            font-family: $font1;
+
+            @media screen and (max-width:730px) {
+                font-size: 1rem;
+            }
+        }
+
+        button {
+
+            letter-spacing: 3px;
+            font-weight: 700;
+
+            @media screen and (max-width:730px) {
+                font-size: 0.5rem;
+                
+    
+            }
+        }
+    }
+
+    .header-coments {
+
+        padding: 30px;
+        font-weight: 800;
+        width: 90%;
+        margin: 0 auto;
+        line-height: 30px;
+        font-family: $font1;
+
+        @media screen and (max-width:730px) {
+            font-size: 0.8rem;
+        }
+    }
+}
