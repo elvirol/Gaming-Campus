@@ -1,10 +1,10 @@
 @font-face {
   font-family: "montserrat-medium";
-  src: url(/assets/fonts/Montserrat-Medium.ttf);
+  src: url(../fonts/Montserrat-Medium.ttf);
 }
 @font-face {
   font-family: "montserrat-thin";
-  src: url(/assets/fonts/Montserrat-Thin.ttf);
+  src: url(../fonts/Montserrat-Thin.ttf);
 }
 * {
   margin: 0;
@@ -22,6 +22,7 @@ body {
 
 li {
   list-style: none;
+  font-size: 0.8rem;
 }
 
 a {
@@ -38,7 +39,7 @@ button {
   cursor: pointer;
 }
 button:hover {
-  background: linear-gradient(30deg, rgb(54, 54, 255), purple, coral);
+  background: linear-gradient(30deg, rgb(83, 140, 254), rgb(199, 0, 199), rgb(219, 120, 83));
   color: black;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -73,12 +74,22 @@ header nav ul li {
   position: relative;
   cursor: pointer;
 }
+header nav ul li::before {
+  content: " ";
+  height: 1px;
+  width: 0%;
+  background: purple;
+  position: absolute;
+  top: -10px;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
 header nav ul li:first-child {
   color: purple;
 }
 header nav ul li:first-child::before {
   content: " ";
-  height: 3px;
+  height: 1px;
   width: 100%;
   background: purple;
   position: absolute;
@@ -91,12 +102,7 @@ header nav ul li:hover {
   scale: 1.1;
 }
 header nav ul li:hover::before {
-  content: " ";
-  height: 2px;
   width: 100%;
-  background: purple;
-  position: absolute;
-  top: -10px;
 }
 header nav ul button {
   background: rgb(204, 204, 204);
@@ -107,7 +113,7 @@ header nav ul button {
   font-weight: 700;
 }
 header .header-container {
-  background: url(/assets/img/bg.jpg) center/cover;
+  background: url(../img/bg.jpg) center/cover;
   padding: 50px;
 }
 header .header-container img {
@@ -388,6 +394,7 @@ footer {
   background: rgb(12, 12, 12);
   color: white;
   padding: 40px;
+  margin-top: 2rem;
 }
 footer h2 {
   text-transform: uppercase;
